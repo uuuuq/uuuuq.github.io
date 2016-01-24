@@ -1,0 +1,755 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="学习," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="年终总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FY-3C MERSI数据几何校正">
+<meta property="og:url" content="http://www.saraba.us/2015/03/28/FY-3/index.html">
+<meta property="og:site_name" content="Subway">
+<meta property="og:description" content="年终总结">
+<meta property="og:updated_time" content="2016-01-24T08:35:08.207Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FY-3C MERSI数据几何校正">
+<meta name="twitter:description" content="年终总结">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> FY-3C MERSI数据几何校正 | Subway </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Subway</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                FY-3C MERSI数据几何校正
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-03-28T03:32:22+08:00" content="2015-03-28">
+              2015-03-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/03/28/FY-3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/28/FY-3/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近用了FY3C/MERSI数据，总体上来说比A星和B星都要好很多。AB上的热红外波段(band5)传感器有问题，是利用VIRR对应波段数据替换的，目前C星上该波段工作状态良好；后续波段存在的stripe noises问题也得到了有效的抑制。数据的组织结构也进行了一些调整。</p>
+<p>FY3C和之前的两颗星一样，只提供L1数据，拿到手上后需要自己进行定标和校正。</p>
+<h1 id="FY3C/MERSI_L1_u6570_u636E_u7ED3_u6784"><a href="#FY3C/MERSI_L1_u6570_u636E_u7ED3_u6784" class="headerlink" title="FY3C/MERSI L1数据结构"></a>FY3C/MERSI L1数据结构</h1><p>L1数据包括四种文件:</p>
+<blockquote>
+<p>中分辨率光谱成像仪L1数据(1KM_GEO)<br>中分辨率光谱成像仪L1数据(250M_GEO)<br>中分辨率光谱成像仪L1数据(1KM)<br>中分辨率光谱成像仪L1数据(250M)<br>四种文件均以HDF5格式存储。1和2内存放的是Geolocation信息，3和4内保存的是反射/发射数据。MERSI的前5个波段为250m分辨率，保存在250M文件中；后15个波段为1000m分辨率，保存在1KM文件中，另外该文件中还包含了重采样为1KM的b1-b5波段数据。</p>
+</blockquote>
+<p>1KM 文件包含3个Group，每个Group下又包含若干个Dataset，其组织结构如下(250KM与其类似)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Calibration&#10;    BB_DN_average&#10;    IR_Cal_Coeff&#10;    SV_DN_average&#10;    VIS_Cal_Coeff&#10;    VOC_DN_average&#10;Data&#10;    EV_1KM_RefSB&#10;    EV_250_Aggr.1KM_Emissive&#10;    EV_250_Aggr.1KM_RefSB&#10;    EV_start_time&#10;    Kmirror_Side&#10;    Scan number&#10;QA&#10;    QA_index</span><br></pre></td></tr></table></figure></p>
+<p>Calibration下的IR_Cal_Coeff和VIS_Cal_Coef存储的是定标系数；Data下EV_1KM_RefSB，EV_250_Aggr.1KM_Emissive， EV_250_Aggr.1KM_RefSB存储的分别是b6-b20、重采样为1KM的b5以及重采样为1KM的b1-b4，其他Dataset对于普通用户意义不大。QA_index中存储的是Quality Assurance，也是很重要的数据，不过没查找的相关的说明文档，不知道该怎么用。</p>
+<p>1KM_GEO 文件包含4个Group：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Geolocation&#10;    DEM&#10;    Landcover&#10;    LandSeaMask&#10;    Latitude&#10;    Longitude&#10;    SensorAzimuth&#10;    SensorZenith&#10;    SolarAzimuth&#10;    SolarZenith&#10;QA&#10;    QA_index&#10;Temporary&#10;    QA_index&#10;Timedata&#10;    Day_Count&#10;    Day_Night_Flag&#10;    Frame_Count&#10;    Millisecond_Count</span><br></pre></td></tr></table></figure></p>
+<p>几何校正只需要使用到Geolocation下的Latitude和Longitude，文件中还包含了DEM、Landcover等数据，可以一并校正，但这些数据没有详细的说明文档，根据我被坑过这么多次的经验来看，最好还是使用其他的数据替代。</p>
+<h1 id="u51E0_u4F55_u6821_u6B63"><a href="#u51E0_u4F55_u6821_u6B63" class="headerlink" title="几何校正"></a>几何校正</h1><h2 id="u5229_u7528ENVI/IDL_u8FDB_u884C_u51E0_u4F55_u6821_u6B63"><a href="#u5229_u7528ENVI/IDL_u8FDB_u884C_u51E0_u4F55_u6821_u6B63" class="headerlink" title="利用ENVI/IDL进行几何校正"></a>利用ENVI/IDL进行几何校正</h2><p>ENVI5.0后自带HDF5文件读取模块，如果使用的是ENVI Classic或是4.8及之前的版本，需要手动加入一个读取HDF5数据的<a href="http://blog.sina.com.cn/s/blog_764b1e9d01015poa.html" target="_blank" rel="external">扩展工具</a>，此处以ENVI Classic + HDF5数据扩展工具为例。</p>
+<p>以ENVI + IDL模式运行程序，利用HDF5扩展工具选中需要校正的Dataset，import to ENVI。正常情况下会弹出Available Band List，包含了刚刚打开的Dataset，记住勾选include data，否则导入的是结构体，需要在idl内处理后用import from IDL variable导入。</p>
+<p>导入待校正的Dataset和对应分辨率的Latitude及Longitude，利用<em>Georeference from input Geometry - Build GLT</em>生成GLT文件，再用<em>Georeference from GLT</em>功能即可进行校正。具体方法网上有，不详述。需要注意的是，FY3A和FY3B都只有1KM的Latitude和Longitude，如果要校正250M的反射率，需要先将1KM的经纬度数据重采样成250M，再进行校正。由于数据质量问题，有时会数据中出现坏扫描线，在Latitude和Longitude中以-999进行填充，如果直接build GLT会出错，比较坏的情况是会生成一个巨大无比的GLT文件，直到把整个硬盘全部填满然后报错。</p>
+<p>用批处理模式调用ENVI API可以方便地对大量数据进行校正。大致思路就是先读取Latitude/Longitude和待校正的数据，再调用envi_glt_doit和envi_georef_from_glt_doit进行校正。需要定义输出图像的projection信息，这里写死了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pro fy3c_mersi_warp, h5f1km, h5f1kmgeo, out_name, pixel_size&#10;&#10;    compile_opt idl2, hidden&#10;    envi,/restore_base_save_files&#10;    ENVI_BATCH_INIT&#10;&#10;    geofid = h5f_open(h5f1kmgeo)&#10;    gid_geo = h5g_open(geofid, &#39;Geolocation&#39;) ;&#26681;&#25454;Group&#30340;Name&#25171;&#24320;Group,&#33719;&#21462;Group id, Name&#21306;&#20998;&#22823;&#23567;&#20889;&#10;    did_lat = h5d_open(gid_geo, &#39;Latitude&#39;) ;&#26681;&#25454;Dataset&#30340;Name&#25171;&#24320;Dataset,&#33719;&#21462;Dataset id&#10;    lat = float(h5d_read(did_lat)) ;&#35835;&#21462;Dataset&#20869;&#30340;&#25968;&#25454;&#10;    h5d_close, did_lat ;&#20851;&#38381;Dataset&#10;    size = size(lat)&#10;    envi_write_envi_file, lat, in_memory,$&#10;     nb = 1, nl = size[2], ns = size[1], r_fid = fid_lat&#10;    delvar, lat&#10;    did_lon = h5d_open(gid_geo, &#39;Longitude&#39;)&#10;    lon = float(h5d_read(did_lon))&#10;    h5d_close, did_lon&#10;    h5g_close, gid_geo ;&#20851;&#38381;Group&#10;    h5f_close, geofid ;&#20851;&#38381;&#25991;&#20214;&#10;    envi_write_envi_file, lon, /in_memory,$&#10;     nb = 1, nl = size[2], ns = size[1], r_fid = fid_lon&#10;    delvar, lon&#10;&#10;&#10;    fid = h5f_open(h5f1km)&#10;    gid = h5g_open(fid, &#39;Data&#39;)&#10;    did = h5d_open(gid, &#39;EV_1KM_RefSB&#39;)&#10;    data = h5d_read(did)&#10;    h5d_close, did&#10;    h5g_close, gid&#10;    h5f_close, fid&#10;    size = size[data]&#10;    envi_write_envi_file, data, /in_memory,&#65509;&#10;     nb = size[3], nl = size[2], ns = size[1], r_fid = fid_data&#10;    delvar, data&#10;&#10;    ;&#23450;&#20041;&#25237;&#24433;&#10;    iproj = ENVI_PROJ_CREATE(/geographic)&#10;    units = ENVI_TRANSLATE_PROJECTION_UNITS(&#39;Meters&#39;)&#10;    datum = &#39;WGS-84&#39;&#10;    oproj = ENVI_PROJ_CREATE(/utm, zone=11, $&#10;            datum=datum, units=units)&#10;&#10;    ;&#29983;&#25104;GLT&#10;    envi_file_query, fid_lon, dims = dims&#10;    envi_doit, &#39;envi_glt_doit&#39;, dims = dims , i_proj = iproj, /in_memory,$&#10;     o_proj = oproj, pixel_size = pixel_size,$&#10;    r_fid = fid_glt, rotation = 0, x_fid = fid_lon,$&#10;     x_pos = [0], y_fid = fid_lat, y_pos = [0]&#10;    envi_file_mng, id =fid_lat, /remove&#10;    envi_file_mng, id =fid_lon, /remove&#10;&#10;    ;&#20960;&#20309;&#26657;&#27491;&#10;    envi_file_query, fid_glt, dims = glt_dims&#10;    envi_doit, &#39;envi_georef_from_glt_doit&#39;,background = 0, fid = fid_ref,$&#10;     glt_dims = glt_dims, glt_fid = fid_glt, out_name = out_name, $&#10;    envi_file_mng, id =fid_glt, /remove&#10;    envi_file_mng, id =fid_ref, /remove&#10;    ENVI_BATCH_EXIT, /NO_CONFIRM&#10;&#10;end</span><br></pre></td></tr></table></figure></p>
+<h2 id="u5229_u7528Gdal_u5DE5_u5177_u8FDB_u884C_u51E0_u4F55_u6821_u6B63"><a href="#u5229_u7528Gdal_u5DE5_u5177_u8FDB_u884C_u51E0_u4F55_u6821_u6B63" class="headerlink" title="利用Gdal工具进行几何校正"></a>利用Gdal工具进行几何校正</h2><p>ENVI GLT校正速度还是慢了点儿，也可以利用Gdal工具来进行校正，原理与ENVI GLT类似，气象局开发的SMART软件也是利用Gdal进行校正的，可惜的是FY3C数据格式与AB星相比变化较大，我手上的SMART版本比较老，不支持FY3C的数据。‘<a href="http://blog.csdn.net/liminlu0314/article/details/9181959" target="_blank" rel="external">使用GDAL工具对FY3系列卫星数据进行校正</a>’这篇博文介绍了如何利用Gdal校正FY-3A数据，这里针对FY-3C数据的特性进行一些修改。</p>
+<p>由于Gdal对FY3数据支持不好，不能完全解析，需要补全未解析的信息。先在命令行中利用gdal_translate导出需要校正的Dataset为VRT格式，先cd到gdal_translate.exe所在的目录，然后输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gdal_translate.exe -of&#160;VRT&#160;HDF5:&#34;E:\FYDATAAmericaCarltonComplexFire\FY3C_MERSI_GBAL_L1_20140611_1835_1000M_MS.HDF&#34;://Data/EV_1KM_RefSB E:\FYDATAAmericaCarltonComplexFire\FY3C_MERSI_GBAL_L1_20140611_1835_1000M_MS.VRT&#10;gdal_translate.exe -of&#160;VRT&#160;HDF5:&#34;E:\FYDATAAmericaCarltonComplexFire\FY3C_MERSI_GBAL_L1_20140611_1835_GEO1K_MS.HDF&#34;://Geolocation/Latitude E:\FYDATAAmericaCarltonComplexFire\FY3C_MERSI_GBAL_L1_20140611_1835_GEO1K_MS.HDF.VRT</span><br></pre></td></tr></table></figure></p>
+<p>经过处理后会得到FY3C_MERSI_GBAL_L1_20140611_1835_1000M_MS.VRT 和FY3C_MERSI_GBAL_L1_20140611_1835_GEO1K_MS.HDF.VRT两个VRT文件，分别包含了待校正dataset的信息，以及geolocation信息。打开FY3C_MERSI_GBAL_L1_20140611_1835_GEO1K_MS.HDF.VRT，找到<em><gcplist> </gcplist></em>节点，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;gcplist Projection=&#34;GEOGCS[&#34;WGS 84&#34;,DATUM[&#34;WGS_1984&#34;,SPHEROID[&#34;WGS 84&#34;,6378137,298.257223563,AUTHORITY[&#34;EPSG&#34;,&#34;7030&#34;]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[&#34;EPSG&#34;,&#34;6326&#34;]],PRIMEM[&#34;Greenwich&#34;,0,AUTHORITY[&#34;EPSG&#34;,&#34;8901&#34;]],UNIT[&#34;degree&#34;,0.0174532925199433,AUTHORITY[&#34;EPSG&#34;,&#34;9108&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;4326&#34;]]&#34;&#62;&#10;    &#60;gcp Id=&#34;&#34; Line=&#34;0.5000&#34; Pixel=&#34;0.5000&#34; X=&#34;2.554386901855E+002&#34; Y=&#34;3.224850082397E+001&#34;&#62;&#60;/gcp&#62;&#10;    &#60;gcp Id=&#34;&#34; Line=&#34;0.5000&#34; Pixel=&#34;68.5000&#34; X=&#34;2.580358886719E+002&#34; Y=&#34;3.211925125122E+001&#34;&#62;&#60;/gcp&#62;&#10;    &#60;gcp Id=&#34;&#34; Line=&#34;0.5000&#34; Pixel=&#34;136.5000&#34; X=&#34;2.599364929199E+002&#34; Y=&#34;3.199073791504E+001&#34;&#62;&#60;/gcp&#62;&#10;    &#60;gcp Id=&#34;&#34; Line=&#34;700.5000&#34; Pixel=&#34;1428.5000&#34; X=&#34;2.720192871094E+002&#34; Y=&#34;2.407986259460E+001&#34;&#62;&#60;/gcp&#62;&#10;    **&#22826;&#38271;&#21024;&#20102;**&#10;    &#60;gcp Id=&#34;&#34; Line=&#34;0.5000&#34; Pixel=&#34;0.5000&#34; X=&#34;2.554386901855E+002&#34; Y=&#34;3.224850082397E+001&#34;&#62;&#60;/gcp&#62;&#10;    &#60;gcp Id=&#34;&#34; Line=&#34;0.5000&#34; Pixel=&#34;68.5000&#34; X=&#34;2.580358886719E+002&#34; Y=&#34;3.211925125122E+001&#34;&#62;&#60;/gcp&#62;&#10;    &#60;gcp Id=&#34;&#34; Line=&#34;0.5000&#34; Pixel=&#34;136.5000&#34; X=&#34;2.599364929199E+002&#34; Y=&#34;3.199073791504E+001&#34;&#62;&#60;/gcp&#62;&#10;    &#60;gcp Id=&#34;&#34; Line=&#34;700.5000&#34; Pixel=&#34;1428.5000&#34; X=&#34;2.720192871094E+002&#34; Y=&#34;2.407986259460E+001&#34;&#62;&#60;/gcp&#62;&#10;  &#60;/gcplist&#62;</span><br></pre></td></tr></table></figure></p>
+<p>将这部分内容复制到FY3C_MERSI_GBAL_L1_20140611_1835_1000M_MS.VRT中的根节点处，然后再插入这段内容，注意修改文件路径和文件名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;pre class=&#34;prettyprint linenums&#34;&#62;&#60;metadata domain=&#34;GEOLOCATION&#34;&#62;&#10;   &#60;mdi key=&#34;LINE_OFFSET&#34;&#62;1&#60;/mdi&#62;&#10;   &#60;mdi key=&#34;LINE_STEP&#34;&#62;1&#60;/mdi&#62;&#10;   &#60;mdi key=&#34;PIXEL_OFFSET&#34;&#62;1&#60;/mdi&#62;&#10;   &#60;mdi key=&#34;PIXEL_STEP&#34;&#62;1&#60;/mdi&#62;&#10;   &#60;mdi key=&#34;SRS&#34;&#62;GEOGCS[&#34;WGS84&#34;,DATUM[&#34;WGS_1984&#34;,SPHEROID[&#34;WGS84&#34;,6378137,298.257223563,AUTHORITY[&#34;EPSG&#34;,&#34;7030&#34;]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY[&#34;EPSG&#34;,&#34;6326&#34;]],PRIMEM[&#34;Greenwich&#34;,0,AUTHORITY[&#34;EPSG&#34;,&#34;8901&#34;]],UNIT[&#34;degree&#34;,0.0174532925199433,AUTHORITY[&#34;EPSG&#34;,&#34;9108&#34;]],AUTHORITY[&#34;EPSG&#34;,&#34;4326&#34;]]&#60;/mdi&#62;&#10;   &#60;mdi key=&#34;X_BAND&#34;&#62;1&#60;/mdi&#62;&#10;   &#60;mdi key=&#34;X_DATASET&#34;&#62;HDF5:&#34;E:\FYDATAAmericaCarltonComplexFire\FY3C_MERSI_GBAL_L1_20140611_1835_GEO1K_MS.HDF&#34;://Geolocation/Longitude&#60;/mdi&#62;&#10;   &#60;mdi key=&#34;Y_BAND&#34;&#62;1&#60;/mdi&#62;&#10;   &#60;mdi key=&#34;Y_DATASET&#34;&#62;HDF5:&#34;E:\FYDATAAmericaCarltonComplexFire\FY3C_MERSI_GBAL_L1_20140611_1835_GEO1K_MS.HDF&#34;://Geolocation/Latitude&#60;/mdi&#62;&#10; &#60;/metadata&#62;</span><br></pre></td></tr></table></figure></p>
+<p>对上面的VRT文件修改之后，就可以对该VRT文件使用gdalwarp工具来进行校正处理，命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gdalwarp.exe -geoloc E:\FYDATAAmericaCarltonComplexFire\FY3C_MERSI_GBAL_L1_20140611_1835_1000M_MS.VRT E:\FYDATAAmericaCarltonComplexFire\FY3C_MERSI_GBAL_L1_20140611_1835_1000M_MS.TIF</span><br></pre></td></tr></table></figure></p>
+<p>执行完毕后即可将所需的Dataset校正到WGS84经纬度坐标系统下。VRT文件是以XML格式进行存储的，可以利用一些xml库方便地对这种格式进行解析和操作。其结果与利用ENVI GLT校正的结果略有不同，但速度较ENVI快很多。</p>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag">#学习</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/01/HEXAR-RF/" rel="prev" title="KONICA HEXAR RF">
+                KONICA HEXAR RF <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/03/28/FY-3/"
+           data-title="FY-3C MERSI数据几何校正" data-url="http://www.saraba.us/2015/03/28/FY-3/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Wu" />
+          <p class="site-author-name" itemprop="name">Wu</p>
+          <p class="site-description motion-element" itemprop="description">人丑就要多读书。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/uuukees" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/shi-shui-zhe" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#FY3C/MERSI_L1_u6570_u636E_u7ED3_u6784"><span class="nav-number">1.</span> <span class="nav-text">FY3C/MERSI L1数据结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u51E0_u4F55_u6821_u6B63"><span class="nav-number">2.</span> <span class="nav-text">几何校正</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5229_u7528ENVI/IDL_u8FDB_u884C_u51E0_u4F55_u6821_u6B63"><span class="nav-number">2.1.</span> <span class="nav-text">利用ENVI/IDL进行几何校正</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5229_u7528Gdal_u5DE5_u5177_u8FDB_u884C_u51E0_u4F55_u6821_u6B63"><span class="nav-number">2.2.</span> <span class="nav-text">利用Gdal工具进行几何校正</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wu</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"chinchun"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+</body>
+</html>
