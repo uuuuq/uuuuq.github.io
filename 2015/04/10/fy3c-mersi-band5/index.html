@@ -65,7 +65,7 @@ band5存储在L1数据的EV_250_ Emissive和EV_250_Aggr.1KM_Emissive两个科学
 <meta property="og:site_name" content="芝士就是力量">
 <meta property="og:description" content="FY3C/MERSI band5是热红外波段，可反演地表温度。总之又是缺少文档，经过与气象局工作人员的沟通才最终搞定。
 band5存储在L1数据的EV_250_ Emissive和EV_250_Aggr.1KM_Emissive两个科学数据集中，内容为红外辐亮度，存储系数为0.01，单位为$mW\cdot m^{-2}\cdot cm^{-1}\cdot sr$。EV_250_ Emissive的">
-<meta property="og:updated_time" content="2016-01-25T05:19:17.863Z">
+<meta property="og:updated_time" content="2016-01-25T07:26:29.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FY3C/MERSI band5反演星上亮温">
 <meta name="twitter:description" content="FY3C/MERSI band5是热红外波段，可反演地表温度。总之又是缺少文档，经过与气象局工作人员的沟通才最终搞定。
@@ -293,7 +293,7 @@ band5存储在L1数据的EV_250_ Emissive和EV_250_Aggr.1KM_Emissive两个科学
       
         <p>FY3C/MERSI band5是热红外波段，可反演地表温度。总之又是缺少文档，经过与气象局工作人员的沟通才最终搞定。</p>
 <p>band5存储在L1数据的<code>EV_250_ Emissive</code>和<code>EV_250_Aggr.1KM_Emissive</code>两个科学数据集中，内容为红外辐亮度，存储系数为0.01，单位为$mW\cdot m^{-2}\cdot cm^{-1}\cdot sr$。<code>EV_250_ Emissive</code>的分辨率为250M，<code>EV_250_Aggr.1KM_Emissive</code><br>为重采样至1KM分辨率的红外辐亮度。</p>
-<p>中心波数$w_n=913.7016cm^{-1}$，根据普朗克公式计算得到等效黑体亮温：$T_e=Plank^{-1}(radiance,w<em>n)$，再将其转换为黑体亮温：$T</em>{bb} = A*T_e+B$，其中$A=1.0047$，$B=-0.8549$。</p>
+<p>band5对应的中心波数$w_n=913.7016cm^{-1}$，根据普朗克公式可计算得到等效黑体亮温：$T_e = Pland^{-1} ( radiance, w<em>n )$，再将其转换为黑体亮温：$T</em>{bb} = A*T_e + B$，其中$A = 1.0047$，$B = -0.8549$。</p>
 <p>得到亮温后可用单通道算法反演地表温度。</p>
 <p>附envi band math公式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.0047*(1.438833*913.7016)/alog(1+(1.191066e-5*913.7016^3)/(b1*0.01))-0.8549</span><br></pre></td></tr></table></figure></p>
 
